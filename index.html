@@ -75,23 +75,404 @@
             cursor: pointer;
             border-radius: 3px;
         }
+
+        /* Workout Tracker Styles */
+        #workout-tracker {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+        .tracker-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .start-workout-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .start-workout-btn:hover {
+            background: #444;
+        }
+        .presets-section, .history-section {
+            margin-bottom: 20px;
+        }
+        .presets-section h3, .history-section h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .preset-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 12px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .preset-card-name {
+            font-weight: bold;
+        }
+        .preset-card-count {
+            font-size: 12px;
+            color: #666;
+        }
+        .preset-card-actions button {
+            padding: 5px 10px;
+            margin-left: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .preset-use-btn {
+            background: #333;
+            color: white;
+        }
+        .preset-delete-btn {
+            background: #d9534f;
+            color: white;
+        }
+        .add-preset-btn {
+            background: white;
+            border: 1px dashed #999;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            color: #666;
+        }
+        .add-preset-btn:hover {
+            background: #f5f5f5;
+        }
+        .back-btn {
+            background: #666;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .preset-name-row {
+            margin-bottom: 15px;
+        }
+        .preset-name-row input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        .helper-text {
+            color: #666;
+            margin: 10px 0;
+        }
+        .muscle-group-header {
+            background: #eee;
+            padding: 8px 12px;
+            margin-top: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .muscle-group-header:hover {
+            background: #e0e0e0;
+        }
+        .muscle-exercises {
+            padding: 10px;
+            background: white;
+            border: 1px solid #eee;
+            display: none;
+        }
+        .muscle-exercises.open {
+            display: block;
+        }
+        .exercise-checkbox {
+            display: block;
+            padding: 6px 0;
+        }
+        .exercise-checkbox input {
+            margin-right: 8px;
+        }
+        .selected-exercises-list {
+            margin-top: 15px;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+        .selected-exercises-list h4 {
+            margin: 0 0 10px 0;
+        }
+        .save-preset-btn {
+            width: 100%;
+            padding: 12px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .workout-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .workout-header span {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .planned-section {
+            margin-bottom: 15px;
+        }
+        .planned-section h3 {
+            margin: 0 0 10px 0;
+        }
+        .planned-exercise {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .planned-exercise.completed {
+            background: #e8f5e9;
+            border-color: #a5d6a7;
+        }
+        .planned-exercise-info {
+            flex: 1;
+        }
+        .planned-exercise-name {
+            font-weight: bold;
+        }
+        .planned-exercise-muscle {
+            font-size: 12px;
+            color: #666;
+        }
+        .planned-exercise-logged {
+            font-size: 12px;
+            color: #4caf50;
+            margin-top: 3px;
+        }
+        .planned-exercise-actions button {
+            padding: 5px 10px;
+            margin-left: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .log-exercise-btn {
+            background: #333;
+            color: white;
+        }
+        .remove-exercise-btn {
+            background: #d9534f;
+            color: white;
+        }
+        .add-exercise-btn {
+            background: white;
+            border: 1px dashed #999;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            color: #666;
+        }
+        #active-log-form {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        #active-log-form h4 {
+            margin: 0 0 10px 0;
+        }
+        .log-form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 500px) {
+            .log-form {
+                grid-template-columns: 1fr;
+            }
+        }
+        .log-form label {
+            display: block;
+            margin-bottom: 3px;
+            font-weight: bold;
+            color: #555;
+            font-size: 14px;
+        }
+        .log-form input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        .log-btn {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .finish-workout-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .workout-history-item {
+            background: white;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .workout-history-header {
+            padding: 10px;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .workout-history-date {
+            font-weight: bold;
+        }
+        .workout-history-summary {
+            font-size: 12px;
+            color: #666;
+        }
+        .workout-history-details {
+            padding: 10px;
+            display: none;
+            border-top: 1px solid #eee;
+        }
+        .workout-history-details.open {
+            display: block;
+        }
+        .workout-history-exercise {
+            padding: 5px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .workout-history-exercise:last-child {
+            border-bottom: none;
+        }
+        .workout-delete-btn {
+            background: #d9534f;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .no-data {
+            color: #888;
+            text-align: center;
+            padding: 15px;
+        }
+        .hidden {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
     <h1>Joseph's Website</h1>
 
-    <!-- Password area -->
+    <!-- Workout Tracker -->
+    <div id="workout-tracker">
+        <h2 class="tracker-title">Workout Tracker</h2>
+
+        <!-- Home View -->
+        <div id="home-view">
+            <button class="start-workout-btn" onclick="startNewWorkout()">Start Workout</button>
+
+            <div class="presets-section">
+                <h3>Presets</h3>
+                <div id="presets-list"></div>
+                <button class="add-preset-btn" onclick="showCreatePreset()">+ Create Preset</button>
+            </div>
+
+            <div class="history-section">
+                <h3>Workout History</h3>
+                <div id="workout-history"></div>
+            </div>
+        </div>
+
+        <!-- Create Preset View -->
+        <div id="create-preset-view" class="hidden">
+            <button class="back-btn" onclick="backToHome()">← Back</button>
+            <h3>Create Preset</h3>
+            <div class="preset-name-row">
+                <input type="text" id="preset-name-input" placeholder="Preset name (e.g., Upper Body)">
+            </div>
+            <p class="helper-text">Select exercises to include:</p>
+            <div id="preset-exercise-selector"></div>
+            <div id="preset-selected-exercises"></div>
+            <button class="save-preset-btn" onclick="savePreset()">Save Preset</button>
+        </div>
+
+        <!-- Active Workout View -->
+        <div id="workout-view" class="hidden">
+            <div class="workout-header">
+                <button class="back-btn" onclick="cancelWorkout()">Cancel</button>
+                <span id="workout-title">Current Workout</span>
+            </div>
+
+            <!-- Planned exercises -->
+            <div class="planned-section">
+                <h3>Exercises</h3>
+                <div id="planned-exercises"></div>
+                <button class="add-exercise-btn" onclick="showAddExercise()">+ Add Exercise</button>
+            </div>
+
+            <!-- Log form for current exercise -->
+            <div id="active-log-form" class="hidden">
+                <h4>Log: <span id="active-exercise-name"></span></h4>
+                <div class="log-form">
+                    <div>
+                        <label>Weight (lbs)</label>
+                        <input type="number" id="active-weight" min="0" step="2.5" placeholder="135">
+                    </div>
+                    <div>
+                        <label>Sets</label>
+                        <input type="number" id="active-sets" min="1" placeholder="3">
+                    </div>
+                    <div>
+                        <label>Reps</label>
+                        <input type="number" id="active-reps" min="1" placeholder="10">
+                    </div>
+                </div>
+                <button class="log-btn" onclick="logExercise()">Log</button>
+            </div>
+
+            <button class="finish-workout-btn" onclick="finishWorkout()">Finish Workout</button>
+        </div>
+
+        <!-- Add Exercise View -->
+        <div id="add-exercise-view" class="hidden">
+            <button class="back-btn" onclick="backToWorkout()">← Back</button>
+            <h3>Add Exercise</h3>
+            <div id="exercise-selector"></div>
+        </div>
+    </div>
+
+    <!-- Notes feature (hidden) -->
+    <!--
     <div id="login-area">
         <input type="password" id="password" placeholder="Enter password">
         <button onclick="checkPassword()">Unlock Notes</button>
     </div>
-
-    <!-- Notes section (hidden until unlocked) -->
     <div id="notes-section">
         <textarea id="note-input" placeholder="Write a note..."></textarea>
         <button id="save-btn" onclick="saveNote()">Save Note</button>
         <div id="notes-list"></div>
     </div>
+    -->
 
     <script>
         // The password to unlock notes
@@ -150,6 +531,436 @@
             notes.splice(index, 1);
             localStorage.setItem('josephNotes', JSON.stringify(notes));
             displayNotes();
+        }
+
+        // ============ WORKOUT TRACKER ============
+
+        // Muscle group data
+        const muscleGroups = {
+            'Chest': ['Upper Chest', 'Middle Chest', 'Lower Chest'],
+            'Shoulders': ['Front Delts', 'Side Delts', 'Rear Delts'],
+            'Back': ['Lats', 'Traps', 'Rhomboids', 'Lower Back'],
+            'Arms': ['Biceps', 'Triceps', 'Forearms'],
+            'Legs': ['Quads', 'Hamstrings', 'Glutes', 'Calves'],
+            'Core': ['Abs', 'Obliques']
+        };
+
+        // Default exercises per muscle
+        const defaultExercises = {
+            'Upper Chest': ['Incline Bench Press', 'Incline Dumbbell Press', 'Incline Flyes'],
+            'Middle Chest': ['Bench Press', 'Dumbbell Press', 'Cable Crossover'],
+            'Lower Chest': ['Decline Bench Press', 'Dips', 'Decline Flyes'],
+            'Front Delts': ['Overhead Press', 'Front Raise', 'Arnold Press'],
+            'Side Delts': ['Lateral Raise', 'Upright Row', 'Cable Lateral Raise'],
+            'Rear Delts': ['Reverse Flyes', 'Face Pulls', 'Rear Delt Row'],
+            'Lats': ['Pull-ups', 'Lat Pulldown', 'Barbell Row', 'Seated Cable Row'],
+            'Traps': ['Shrugs', 'Upright Row', 'Farmer Walks'],
+            'Rhomboids': ['Cable Row', 'Dumbbell Row', 'Reverse Flyes'],
+            'Lower Back': ['Deadlift', 'Back Extensions', 'Good Mornings'],
+            'Biceps': ['Barbell Curl', 'Dumbbell Curl', 'Hammer Curl', 'Preacher Curl'],
+            'Triceps': ['Tricep Pushdown', 'Skull Crushers', 'Overhead Extension', 'Dips'],
+            'Forearms': ['Wrist Curl', 'Reverse Curl', 'Farmer Walks'],
+            'Quads': ['Squats', 'Leg Press', 'Leg Extensions', 'Lunges'],
+            'Hamstrings': ['Romanian Deadlift', 'Leg Curl', 'Good Mornings'],
+            'Glutes': ['Hip Thrust', 'Bulgarian Split Squat', 'Glute Bridge'],
+            'Calves': ['Calf Raise', 'Seated Calf Raise', 'Donkey Calf Raise'],
+            'Abs': ['Crunches', 'Leg Raises', 'Plank', 'Cable Crunch'],
+            'Obliques': ['Russian Twist', 'Side Plank', 'Woodchoppers']
+        };
+
+        // Current workout state
+        let currentWorkout = {
+            name: '',
+            exercises: [] // { id, muscle, exercise, weight, sets, reps, logged }
+        };
+        let activeExerciseId = null;
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            displayPresets();
+            displayWorkoutHistory();
+        });
+
+        // ===== PRESETS =====
+
+        function getPresets() {
+            return JSON.parse(localStorage.getItem('josephPresets') || '[]');
+        }
+
+        function savePresets(presets) {
+            localStorage.setItem('josephPresets', JSON.stringify(presets));
+        }
+
+        function displayPresets() {
+            const presets = getPresets();
+            const container = document.getElementById('presets-list');
+
+            if (presets.length === 0) {
+                container.innerHTML = '<p class="no-data">No presets yet</p>';
+                return;
+            }
+
+            container.innerHTML = presets.map((preset, index) => `
+                <div class="preset-card">
+                    <div>
+                        <div class="preset-card-name">${preset.name}</div>
+                        <div class="preset-card-count">${preset.exercises.length} exercises</div>
+                    </div>
+                    <div class="preset-card-actions">
+                        <button class="preset-use-btn" onclick="usePreset(${index})">Start</button>
+                        <button class="preset-delete-btn" onclick="deletePreset(${index})">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showCreatePreset() {
+            document.getElementById('home-view').classList.add('hidden');
+            document.getElementById('create-preset-view').classList.remove('hidden');
+            document.getElementById('preset-name-input').value = '';
+            renderExerciseSelector('preset-exercise-selector', 'preset');
+            updatePresetSelectedList();
+        }
+
+        function renderExerciseSelector(containerId, mode) {
+            const container = document.getElementById(containerId);
+            let html = '';
+
+            for (const [group, muscles] of Object.entries(muscleGroups)) {
+                html += `<div class="muscle-group-header" onclick="toggleMuscleGroup(this)">${group}</div>`;
+                html += `<div class="muscle-exercises">`;
+
+                for (const muscle of muscles) {
+                    const exercises = defaultExercises[muscle] || [];
+                    html += `<div><strong>${muscle}</strong></div>`;
+                    for (const ex of exercises) {
+                        const checkId = `${mode}-${muscle}-${ex}`.replace(/\s+/g, '-');
+                        html += `
+                            <label class="exercise-checkbox">
+                                <input type="checkbox" id="${checkId}" data-muscle="${muscle}" data-exercise="${ex}" onchange="onExerciseCheck('${mode}')">
+                                ${ex}
+                            </label>
+                        `;
+                    }
+                }
+                html += `</div>`;
+            }
+
+            container.innerHTML = html;
+        }
+
+        function toggleMuscleGroup(header) {
+            const exercises = header.nextElementSibling;
+            exercises.classList.toggle('open');
+        }
+
+        function onExerciseCheck(mode) {
+            if (mode === 'preset') {
+                updatePresetSelectedList();
+            }
+        }
+
+        function updatePresetSelectedList() {
+            const container = document.getElementById('preset-selected-exercises');
+            const checked = document.querySelectorAll('#preset-exercise-selector input:checked');
+
+            if (checked.length === 0) {
+                container.innerHTML = '';
+                return;
+            }
+
+            let html = '<div class="selected-exercises-list"><h4>Selected (' + checked.length + '):</h4>';
+            checked.forEach(cb => {
+                html += `<div>${cb.dataset.exercise} (${cb.dataset.muscle})</div>`;
+            });
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        function savePreset() {
+            const name = document.getElementById('preset-name-input').value.trim();
+            if (!name) {
+                alert('Please enter a preset name');
+                return;
+            }
+
+            const checked = document.querySelectorAll('#preset-exercise-selector input:checked');
+            if (checked.length === 0) {
+                alert('Please select at least one exercise');
+                return;
+            }
+
+            const exercises = [];
+            checked.forEach(cb => {
+                exercises.push({
+                    muscle: cb.dataset.muscle,
+                    exercise: cb.dataset.exercise
+                });
+            });
+
+            const presets = getPresets();
+            presets.push({ name, exercises });
+            savePresets(presets);
+
+            backToHome();
+            displayPresets();
+        }
+
+        function deletePreset(index) {
+            const presets = getPresets();
+            presets.splice(index, 1);
+            savePresets(presets);
+            displayPresets();
+        }
+
+        function usePreset(index) {
+            const preset = getPresets()[index];
+            currentWorkout = {
+                name: preset.name,
+                exercises: preset.exercises.map((ex, i) => ({
+                    id: i,
+                    muscle: ex.muscle,
+                    exercise: ex.exercise,
+                    weight: null,
+                    sets: null,
+                    reps: null,
+                    logged: false
+                }))
+            };
+            showWorkoutView();
+        }
+
+        // ===== ACTIVE WORKOUT =====
+
+        function startNewWorkout() {
+            currentWorkout = {
+                name: 'Workout',
+                exercises: []
+            };
+            showWorkoutView();
+        }
+
+        function showWorkoutView() {
+            document.getElementById('home-view').classList.add('hidden');
+            document.getElementById('workout-view').classList.remove('hidden');
+            document.getElementById('workout-title').textContent = currentWorkout.name;
+            document.getElementById('active-log-form').classList.add('hidden');
+            activeExerciseId = null;
+            renderPlannedExercises();
+        }
+
+        function renderPlannedExercises() {
+            const container = document.getElementById('planned-exercises');
+
+            if (currentWorkout.exercises.length === 0) {
+                container.innerHTML = '<p class="no-data">No exercises added yet</p>';
+                return;
+            }
+
+            container.innerHTML = currentWorkout.exercises.map(ex => `
+                <div class="planned-exercise ${ex.logged ? 'completed' : ''}">
+                    <div class="planned-exercise-info">
+                        <div class="planned-exercise-name">${ex.exercise}</div>
+                        <div class="planned-exercise-muscle">${ex.muscle}</div>
+                        ${ex.logged ? `<div class="planned-exercise-logged">${ex.weight} lbs × ${ex.sets}×${ex.reps}</div>` : ''}
+                    </div>
+                    <div class="planned-exercise-actions">
+                        ${!ex.logged ? `<button class="log-exercise-btn" onclick="openLogForm(${ex.id})">Log</button>` : ''}
+                        <button class="remove-exercise-btn" onclick="removeExercise(${ex.id})">Remove</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showAddExercise() {
+            document.getElementById('workout-view').classList.add('hidden');
+            document.getElementById('add-exercise-view').classList.remove('hidden');
+            renderExerciseSelectorForWorkout();
+        }
+
+        function renderExerciseSelectorForWorkout() {
+            const container = document.getElementById('exercise-selector');
+            let html = '';
+
+            for (const [group, muscles] of Object.entries(muscleGroups)) {
+                html += `<div class="muscle-group-header" onclick="toggleMuscleGroup(this)">${group}</div>`;
+                html += `<div class="muscle-exercises">`;
+
+                for (const muscle of muscles) {
+                    const exercises = defaultExercises[muscle] || [];
+                    html += `<div><strong>${muscle}</strong></div>`;
+                    for (const ex of exercises) {
+                        html += `
+                            <label class="exercise-checkbox">
+                                <button style="padding:5px 10px;margin:2px 0;cursor:pointer" onclick="addExerciseToWorkout('${muscle}', '${ex}')">+ ${ex}</button>
+                            </label>
+                        `;
+                    }
+                }
+                html += `</div>`;
+            }
+
+            container.innerHTML = html;
+        }
+
+        function addExerciseToWorkout(muscle, exercise) {
+            const newId = currentWorkout.exercises.length;
+            currentWorkout.exercises.push({
+                id: newId,
+                muscle: muscle,
+                exercise: exercise,
+                weight: null,
+                sets: null,
+                reps: null,
+                logged: false
+            });
+            backToWorkout();
+        }
+
+        function backToWorkout() {
+            document.getElementById('add-exercise-view').classList.add('hidden');
+            document.getElementById('workout-view').classList.remove('hidden');
+            renderPlannedExercises();
+        }
+
+        function removeExercise(id) {
+            currentWorkout.exercises = currentWorkout.exercises.filter(ex => ex.id !== id);
+            if (activeExerciseId === id) {
+                document.getElementById('active-log-form').classList.add('hidden');
+                activeExerciseId = null;
+            }
+            renderPlannedExercises();
+        }
+
+        function openLogForm(id) {
+            activeExerciseId = id;
+            const ex = currentWorkout.exercises.find(e => e.id === id);
+            document.getElementById('active-exercise-name').textContent = ex.exercise;
+            document.getElementById('active-weight').value = '';
+            document.getElementById('active-sets').value = '';
+            document.getElementById('active-reps').value = '';
+            document.getElementById('active-log-form').classList.remove('hidden');
+        }
+
+        function logExercise() {
+            const weight = parseFloat(document.getElementById('active-weight').value);
+            const sets = parseInt(document.getElementById('active-sets').value);
+            const reps = parseInt(document.getElementById('active-reps').value);
+
+            if (isNaN(weight) || isNaN(sets) || isNaN(reps)) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const ex = currentWorkout.exercises.find(e => e.id === activeExerciseId);
+            ex.weight = weight;
+            ex.sets = sets;
+            ex.reps = reps;
+            ex.logged = true;
+
+            document.getElementById('active-log-form').classList.add('hidden');
+            activeExerciseId = null;
+            renderPlannedExercises();
+        }
+
+        function cancelWorkout() {
+            if (currentWorkout.exercises.some(ex => ex.logged)) {
+                if (!confirm('You have logged exercises. Discard this workout?')) {
+                    return;
+                }
+            }
+            currentWorkout = { name: '', exercises: [] };
+            backToHome();
+        }
+
+        function finishWorkout() {
+            const loggedExercises = currentWorkout.exercises.filter(ex => ex.logged);
+
+            if (loggedExercises.length === 0) {
+                alert('Please log at least one exercise');
+                return;
+            }
+
+            const sessions = getSessions();
+            sessions.push({
+                id: Date.now(),
+                date: new Date().toLocaleDateString(),
+                name: currentWorkout.name,
+                exercises: loggedExercises.map(ex => ({
+                    muscle: ex.muscle,
+                    exercise: ex.exercise,
+                    weight: ex.weight,
+                    sets: ex.sets,
+                    reps: ex.reps
+                }))
+            });
+            saveSessions(sessions);
+
+            currentWorkout = { name: '', exercises: [] };
+            backToHome();
+            displayWorkoutHistory();
+        }
+
+        // ===== WORKOUT HISTORY =====
+
+        function getSessions() {
+            return JSON.parse(localStorage.getItem('josephWorkoutSessions') || '[]');
+        }
+
+        function saveSessions(sessions) {
+            localStorage.setItem('josephWorkoutSessions', JSON.stringify(sessions));
+        }
+
+        function displayWorkoutHistory() {
+            const sessions = getSessions().sort((a, b) => b.id - a.id);
+            const container = document.getElementById('workout-history');
+
+            if (sessions.length === 0) {
+                container.innerHTML = '<p class="no-data">No workouts yet</p>';
+                return;
+            }
+
+            container.innerHTML = sessions.map(session => `
+                <div class="workout-history-item">
+                    <div class="workout-history-header" onclick="toggleHistoryDetails(this)">
+                        <div>
+                            <div class="workout-history-date">${session.date} - ${session.name}</div>
+                            <div class="workout-history-summary">${session.exercises.length} exercises</div>
+                        </div>
+                        <button class="workout-delete-btn" onclick="event.stopPropagation(); deleteSession(${session.id})">Delete</button>
+                    </div>
+                    <div class="workout-history-details">
+                        ${session.exercises.map(ex => `
+                            <div class="workout-history-exercise">
+                                <strong>${ex.exercise}</strong> (${ex.muscle})<br>
+                                ${ex.weight} lbs × ${ex.sets}×${ex.reps}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleHistoryDetails(header) {
+            const details = header.nextElementSibling;
+            details.classList.toggle('open');
+        }
+
+        function deleteSession(id) {
+            const sessions = getSessions().filter(s => s.id !== id);
+            saveSessions(sessions);
+            displayWorkoutHistory();
+        }
+
+        // ===== NAVIGATION =====
+
+        function backToHome() {
+            document.getElementById('create-preset-view').classList.add('hidden');
+            document.getElementById('workout-view').classList.add('hidden');
+            document.getElementById('add-exercise-view').classList.add('hidden');
+            document.getElementById('home-view').classList.remove('hidden');
+            displayPresets();
+            displayWorkoutHistory();
         }
     </script>
 </body>
